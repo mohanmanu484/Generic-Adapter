@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.mohang.genericadapterexample.model.Car"/>
+        <variable
+            name="pos"
+            type="Integer"/>
+        <variable
+            name="actionHandler"
+            type="com.example.mohang.genericadapterexample.ActionHandlerFragment"/>
+
+    </data>
+
+<LinearLayout
+    android:background="@color/yellow"
+    android:padding="@dimen/dimen_16"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:onClick="@{()->actionHandler.onCarImageItemClick(item,pos)}"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <TextView
+        android:text="@{item.name}"
+        android:textColor="@color/white"
+        android:onClick="@{(v)->actionHandler.onCarTextItemClick(v,item,pos)}"
+        tools:text="single view type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_16"/>
+
+</LinearLayout>
+    </layout>

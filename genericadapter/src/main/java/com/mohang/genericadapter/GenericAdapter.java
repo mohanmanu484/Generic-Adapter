@@ -1,6 +1,7 @@
 package com.mohang.genericadapter;
 
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableField;
 import android.databinding.ViewDataBinding;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
@@ -104,9 +105,12 @@ public class GenericAdapter<T> extends BaseAdapter {
         }
 
         public void setItem(T item, int pos, ActionHandler actionHandler) {
-            viewDataBinding.setVariable(BR.item, item);
-            viewDataBinding.setVariable(BR.pos, pos);
-            viewDataBinding.setVariable(BR.handler, actionHandler);
+
+            ObservableField<T> observableField=new ObservableField<>();
+
+            viewDataBinding.setVariable(com.mohang.genericadapter.BR.item, item);
+            viewDataBinding.setVariable(com.mohang.genericadapter.BR.pos, pos);
+            viewDataBinding.setVariable(com.mohang.genericadapter.BR.actionHandler, actionHandler);
 
             viewDataBinding.executePendingBindings();
         }

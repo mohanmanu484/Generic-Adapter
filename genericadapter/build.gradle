@@ -1,5 +1,32 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+/*ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'generic-adapter'
+
+    publishedGroupId = 'com.mohanmanu484.genericadapter'
+    libraryName = 'GenericAdapter'
+    artifact = 'generic-adapter'
+
+    libraryDescription = 'single adapter on Android'
+
+    siteUrl = 'https://github.com/mohanmanu484/Generic-Adapter'
+    gitUrl = 'https://github.com/mohanmanu484/Generic-Adapter.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'mohanmanu484'
+    developerName = 'Mohan G'
+    developerEmail = 'mohanmanu484@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}*/
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
@@ -30,6 +57,52 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.+'
     compile 'com.android.support:design:26.+'
 }
-repositories {
-    mavenCentral()
+
+group = 'com.mohang.genericadapter'
+version = '1.0'
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
 }
+
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath()
+            .join(File.pathSeparator))
+}
+task generateJavadocsJar(type: Jar) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+generateJavadocsJar.dependsOn generateJavadocs
+artifacts {
+    archives generateJavadocsJar
+    archives generateSourcesJar
+}
+
+bintray {
+    user = 'mohanmanu484'
+    key = 'ec2bbd85f9edb3a328b63634d5fa2afea139494a'
+    pkg {
+        repo = 'maven'
+        name = 'com.github.mohanmanu484.generic-adapter'
+
+        version {
+            name = '1.0'
+            desc = 'generic adapter'
+            released = new Date()
+            vcsTag = '1.0'
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/mohanmanu484/Generic-Adapter.git'
+        websiteUrl = 'https://github.com/mohanmanu484/Generic-Adapter'
+    }
+    configurations = ['archives']
+
+}
+
+
+

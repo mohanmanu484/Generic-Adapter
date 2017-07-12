@@ -30,6 +30,4 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.+'
     compile project(':genericadapter')
 }
-repositories {
-    mavenCentral()
-}
+

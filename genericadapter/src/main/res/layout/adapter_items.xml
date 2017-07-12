@@ -8,7 +8,7 @@
             name="pos"
             type="Integer"/>
         <variable
-            name="handler"
+            name="actionHandler"
             type="com.mohang.genericadapter.ActionHandler"/>
     </data>
 

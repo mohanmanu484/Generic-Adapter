@@ -12,4 +12,5 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<RecyclerView.V
 
     public abstract void updateItems(List<T> listItems);
     public abstract void calculateDiff(List<T> data);
+    
 }

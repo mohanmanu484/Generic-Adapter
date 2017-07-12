@@ -12,16 +12,42 @@
 
 
     <LinearLayout
+        android:padding="@dimen/dimen_16"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-        <android.support.v7.widget.RecyclerView
-            app:listItem="@{model.observableList}"
-            app:genericLayout="@{@layout/adapter_sample_item}"
+       <Button
+           android:onClick="simpleExample"
+           android:text="Simple example"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+        <Button
+            android:onClick="multipleViewType"
+            android:text="Mutiple view type example"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="handleOnClickExample"
+            android:text="Handle onCLick example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="gridAdapterExample"
+            android:text="Grid adapter example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="custumOnClickExample"
+            android:text="Custum onclick example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="fetchDataFromHandlers"
+            android:text="Fetching data from handlers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-        </android.support.v7.widget.RecyclerView>
 
 
     </LinearLayout>
