@@ -9,7 +9,7 @@ One recycler view adapter for all your project
  
 2. Add dependency 
  
-        compile 'com.mohang.genericadapter:genericadapter:2.0'
+        compile 'com.mohanmanu.genericadapter:genericadapter:1.0'
  
 3. Add attributes for your recycler view 
 
