@@ -69,13 +69,13 @@ public class ActionHandlerFragment extends Fragment implements ActionHandler {
 
     public void onBusImageItemClick(Bus bus, int pos){
 
-        Toast.makeText(getActivity(), "Car's image  item clicked @ pos "+pos+" ="+bus.getName(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "Bus's image  item clicked @ pos "+pos+" ="+bus.getName(), Toast.LENGTH_SHORT).show();
 
     }
 
     public void onBusTextItemClick(Bus bus,int pos){
 
-        Toast.makeText(getActivity(), "car's text item clicked @ pos "+pos+" ="+bus.getName(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "Bus's text item clicked @ pos "+pos+" ="+bus.getName(), Toast.LENGTH_SHORT).show();
     }
 
     RecyclerConfiguration recyclerConfiguration=new RecyclerConfiguration() {
