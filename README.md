@@ -9,7 +9,9 @@ One recycler view adapter for all your project
  
 2. Add dependency 
  
-        compile 'com.mohanmanu.genericadapter:genericadapter:1.0'
+         compile ('com.mohanmanu.genericadapter:genericadapter:1.0'){
+                exclude group: 'com.android.support'
+            }
  
 3. Add attributes for your recycler view 
 
