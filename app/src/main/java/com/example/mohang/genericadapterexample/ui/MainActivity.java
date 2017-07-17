@@ -53,4 +53,8 @@ public class MainActivity extends AppCompatActivity {
     public void dynamicListExample(View view) {
         Utils.addFragment(this,ExampleActivity.DYNAMIC_LIST_FRAGMENT);
     }
+
+    public void HandleViewStatesExample(View view) {
+        Utils.addFragment(this,ExampleActivity.HANDLE_VIEW_STATES);
+    }
 }

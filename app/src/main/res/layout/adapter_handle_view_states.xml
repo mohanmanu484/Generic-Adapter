@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.example.mohang.genericadapterexample.model.Grades"/>
+        <variable
+            name="item"
+            type="com.example.mohang.genericadapterexample.model.SomeObject" />
+        <variable
+            name="pos"
+            type="Integer"/>
+        <variable
+            name="actionHandler"
+            type="com.example.mohang.genericadapterexample.GradesViewModel"/>
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_16"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:checked="@{item.selectedGrade==Grades.FIRST}"
+                android:layout_weight="1"
+                android:onClick="@{()->actionHandler.onGradeSelect(pos,Grades.FIRST)}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First" />
+
+            <RadioButton
+                android:onClick="@{()->actionHandler.onGradeSelect(pos,Grades.SECOND)}"
+                android:checked="@{item.selectedGrade==Grades.SECOND}"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Second" />
+
+            <RadioButton
+                android:onClick="@{()->actionHandler.onGradeSelect(pos,Grades.THIRD)}"
+                android:checked="@{item.selectedGrade==Grades.THIRD}"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Third" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</layout>

@@ -10,6 +10,11 @@
             type="com.example.mohang.genericadapterexample.ui.MainActivity" />
     </data>
 
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
 
     <LinearLayout
         android:padding="@dimen/dimen_16"
@@ -53,9 +58,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <Button
+            android:onClick="HandleViewStatesExample"
+            android:text="Handle view states"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
 
     </LinearLayout>
+
+    </ScrollView>
 
 </layout>
 

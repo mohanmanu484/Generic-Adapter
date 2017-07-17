@@ -24,6 +24,7 @@ public class ExampleActivity extends AppCompatActivity {
     public static final int CUSTUM_ON_CLICK=4;
     public static final int FETCH_DATA_FROM_HANDLER=5;
     public static final int DYNAMIC_LIST_FRAGMENT=6;
+    public static final int HANDLE_VIEW_STATES=7;
 
 
     @Override
@@ -64,6 +65,8 @@ public class ExampleActivity extends AppCompatActivity {
             case FETCH_DATA_FROM_HANDLER:fragment=new DataFetchFragment();
                 break;
             case DYNAMIC_LIST_FRAGMENT:fragment=new DynamicListFragment();
+                break;
+            case HANDLE_VIEW_STATES:fragment=new HandleViewStatesFragment();
                 break;
 
             default:fragment=new SingleViewTypeFragment();
