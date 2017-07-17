@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.example.mohang.genericadapterexample.MainActivity" />
+            type="com.example.mohang.genericadapterexample.ui.MainActivity" />
     </data>
 
 
@@ -45,6 +45,11 @@
         <Button
             android:onClick="fetchDataFromHandlers"
             android:text="Fetching data from handlers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="dynamicListExample"
+            android:text="Dynamic list example"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

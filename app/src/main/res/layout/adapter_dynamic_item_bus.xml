@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.mohang.genericadapterexample.model.Bus" />
+        <variable
+            name="actionHandler"
+            type="com.example.mohang.genericadapterexample.ui.DynamicListModel"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/white"
+            android:padding="@dimen/dimen_16"
+            android:text="@{item.name}"
+            android:onClick="@{(v)->actionHandler.onItemClick(v,item.name)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</layout>

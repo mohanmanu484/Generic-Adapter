@@ -3,6 +3,8 @@ package com.example.mohang.genericadapterexample;
 import android.content.Context;
 import android.content.Intent;
 
+import com.example.mohang.genericadapterexample.ui.ExampleActivity;
+
 /**
  * Created by mohang on 12/7/17.
  */

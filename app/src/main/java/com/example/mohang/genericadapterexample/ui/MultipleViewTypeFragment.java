@@ -1,4 +1,4 @@
-package com.example.mohang.genericadapterexample;
+package com.example.mohang.genericadapterexample.ui;
 
 import android.app.Fragment;
 import android.databinding.DataBindingUtil;
@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.mohang.genericadapterexample.DataSource;
+import com.example.mohang.genericadapterexample.R;
 import com.example.mohang.genericadapterexample.databinding.FragmentMultipleViewTypeBinding;
 import com.example.mohang.genericadapterexample.model.Car;
 import com.mohang.genericadapter.ViewTypeHandler;
@@ -28,7 +30,7 @@ public class MultipleViewTypeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        FragmentMultipleViewTypeBinding fragmentMultipleViewTypeBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_multiple_view_type,container,false);
+        FragmentMultipleViewTypeBinding fragmentMultipleViewTypeBinding=DataBindingUtil.inflate(inflater, R.layout.fragment_multiple_view_type,container,false);
         fragmentMultipleViewTypeBinding.setList(observableList);
         fragmentMultipleViewTypeBinding.setViewTypeHandler(viewTypeHandler);
         observableList.addAll(DataSource.getMultiViewTypeData());

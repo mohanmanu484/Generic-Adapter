@@ -1,4 +1,4 @@
-package com.example.mohang.genericadapterexample;
+package com.example.mohang.genericadapterexample.ui;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -6,6 +6,8 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.mohang.genericadapterexample.R;
 
 /**
  * Created by mohang on 11/7/17.
@@ -21,6 +23,7 @@ public class ExampleActivity extends AppCompatActivity {
     public static final int GRID_ADAPTER=3;
     public static final int CUSTUM_ON_CLICK=4;
     public static final int FETCH_DATA_FROM_HANDLER=5;
+    public static final int DYNAMIC_LIST_FRAGMENT=6;
 
 
     @Override
@@ -59,6 +62,8 @@ public class ExampleActivity extends AppCompatActivity {
             case CUSTUM_ON_CLICK:fragment=new ActionHandlerFragment();
                 break;
             case FETCH_DATA_FROM_HANDLER:fragment=new DataFetchFragment();
+                break;
+            case DYNAMIC_LIST_FRAGMENT:fragment=new DynamicListFragment();
                 break;
 
             default:fragment=new SingleViewTypeFragment();

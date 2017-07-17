@@ -1,4 +1,4 @@
-package com.example.mohang.genericadapterexample;
+package com.example.mohang.genericadapterexample.ui;
 
 import android.app.Fragment;
 import android.databinding.DataBindingUtil;
@@ -11,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.mohang.genericadapterexample.BR;
+import com.example.mohang.genericadapterexample.DataSource;
+import com.example.mohang.genericadapterexample.GridRecyclerConfig;
+import com.example.mohang.genericadapterexample.R;
 import com.example.mohang.genericadapterexample.databinding.FragmentGridAdapterBinding;
 import com.example.mohang.genericadapterexample.model.Bus;
 import com.example.mohang.genericadapterexample.model.Car;

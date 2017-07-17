@@ -15,7 +15,7 @@
             type="com.mohang.genericadapter.RecyclerConfiguration"/>
         <variable
             name="actionHandler"
-            type="com.example.mohang.genericadapterexample.DataFetchFragment"/>
+            type="com.example.mohang.genericadapterexample.ui.DataFetchFragment"/>
     </data>
 
 

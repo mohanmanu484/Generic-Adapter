@@ -34,8 +34,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 3
-        versionName "1.3"
+        versionCode 1
+        versionName "1.0"
 
     }
 
@@ -58,8 +58,8 @@ dependencies {
     compile 'com.android.support:design:26.+'
 }
 
-group = 'com.mohang.genericadapter'
-version = '1.3'
+group = 'com.mohanmanu.genericadapter'
+version = '1.0'
 
 task generateSourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
@@ -86,14 +86,14 @@ bintray {
     user = 'mohanmanu484'
     key = 'ec2bbd85f9edb3a328b63634d5fa2afea139494a'
     pkg {
-        repo = 'maven'
-        name = 'com.github.mohanmanu484.generic-adapter'
+        repo = 'mohan'
+        name = 'generic-adapter-android'
 
         version {
-            name = '1.3'
+            name = '1.0'
             desc = 'generic adapter'
             released = new Date()
-            vcsTag = '1.3'
+            vcsTag = '1.0'
         }
 
         licenses = ['Apache-2.0']

@@ -1,4 +1,4 @@
-package com.example.mohang.genericadapterexample;
+package com.example.mohang.genericadapterexample.ui;
 
 import android.app.Fragment;
 import android.databinding.DataBindingUtil;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.mohang.genericadapterexample.DataSource;
+import com.example.mohang.genericadapterexample.R;
 import com.example.mohang.genericadapterexample.databinding.FragmentViewListenerBinding;
 import com.mohang.genericadapter.ViewListener;
 
@@ -26,7 +28,7 @@ public class ViewClickListenerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        FragmentViewListenerBinding fragmentSingleViewtypeBinding= DataBindingUtil.inflate(inflater,R.layout.fragment_view_listener,container,false);
+        FragmentViewListenerBinding fragmentSingleViewtypeBinding= DataBindingUtil.inflate(inflater, R.layout.fragment_view_listener,container,false);
         fragmentSingleViewtypeBinding.setList(observableList);
         observableList.addAll(DataSource.getListOfNUmbers());
         fragmentSingleViewtypeBinding.setViewListener(viewListener);

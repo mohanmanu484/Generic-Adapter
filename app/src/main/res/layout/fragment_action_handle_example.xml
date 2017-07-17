@@ -18,7 +18,7 @@
             type="com.mohang.genericadapter.ViewListener"/>
         <variable
             name="actionHandler"
-            type="com.example.mohang.genericadapterexample.ActionHandlerFragment"/>
+            type="com.example.mohang.genericadapterexample.ui.ActionHandlerFragment"/>
     </data>
 
 
