@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 import com.example.mohang.genericadapterexample.R;
 
@@ -31,6 +32,7 @@ public class ExampleActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         int fragmentType = getIntent().getExtras().getInt(FRAGMENT_TYPE,0);
@@ -72,5 +74,16 @@ public class ExampleActivity extends AppCompatActivity {
             default:fragment=new SingleViewTypeFragment();
         }
         return fragment;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId()==android.R.id.home){
+            onBackPressed();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
