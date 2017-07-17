@@ -217,4 +217,7 @@ One recycler view adapter for all your project
  
    your adapter item should always use the same variable to work
    
+   find the apk here
+   https://play.google.com/store/apps/details?id=com.mohang.genericadapterexample
+   
    
